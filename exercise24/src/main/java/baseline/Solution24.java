@@ -1,3 +1,7 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 3 Solutions
+ *  Copyright 2021 Gabriel Martin
+ */
 package baseline;
 
 import java.util.Arrays;
@@ -25,6 +29,8 @@ public class Solution24 {
         //is false print is not an anagram
         if (solution.isAnagram(char1, char2)){
             System.out.printf("%s and %s are anagrams!", solution.word1, solution.word2);
+        } else {
+            System.out.printf("%s and %s are NOT anagrams!", solution.word1, solution.word2);
         }
 
 
