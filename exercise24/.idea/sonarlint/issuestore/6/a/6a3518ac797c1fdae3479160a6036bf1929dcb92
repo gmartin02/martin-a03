@@ -1,9 +1,0 @@
-
-Q
-java:S1854"<Remove this useless assignment to local variable "solution".(®›É{
-B
-java:S1481"-Remove this unused "solution" local variable.(®›É{
-H
-java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ
-I
-java:S1128".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ

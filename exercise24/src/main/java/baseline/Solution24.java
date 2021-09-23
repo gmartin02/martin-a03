@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Solution24 {
+    private char[] word1;
+    private char[] word2;
+
     public static void main(String[] args) {
         Solution24 solution = new Solution24();
         //prompt user to enter the first word and store it in String word1
