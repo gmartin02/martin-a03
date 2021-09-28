@@ -23,17 +23,18 @@ public class Solution25 {
 
         //using the returned value from passwordStrengthChecker print out the correct statement
         if(solution.strength == 1){
-            System.out.printf("The password %s is very weak!", solution.password);
+            System.out.printf("The password \"%s\" is very weak!", solution.password);
         }
         if(solution.strength == 2){
-            System.out.printf("The password %s is weak!", solution.password);
+            System.out.printf("The password \"%s\" is weak!", solution.password);
         }
         if(solution.strength == 3){
-            System.out.printf("The password %s is strong!", solution.password);
+            System.out.printf("The password \"%s\" is strong!", solution.password);
         }
         if(solution.strength == 4){
-            System.out.printf("The password %s is very strong!", solution.password);
-        } else {
+            System.out.printf("The password \"%s\" is very strong!", solution.password);
+        }
+        if(solution.strength == 0) {
             System.out.println("Strength of the password could not be determined.");
         }
     }
@@ -66,23 +67,23 @@ public class Solution25 {
             }
         }
         //very weak if only num is true and length < 8 (false)
-        if(num && !length){
+        if(num && !length && !specialChar && !character){
             return 1;
         }
         //weak if only character is true and length < 8 (false)
-        if(character && !length){
+        if(character && !length && !specialChar && !num){
             return 2;
         }
         //strong if num AND char are true and length >= 8 (true)
         if(num && character && length){
+            //very strong if num AND char AND specialChar are true and length >= 8 (true)
+            if(specialChar){
+                return 4;
+            }
             return 3;
         }
-        //very strong if num AND char AND specialChar are true and length >= 8 (true)
-        if(num && character && specialChar && length){
-            return 4;
-        }
-        //returns an int 1-4 that relates to an output statement
+
+        //returns an int 0-4 that relates to an output statement
         return 0;
     }
-
 }
