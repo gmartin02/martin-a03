@@ -6,28 +6,35 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Solution25Test {
     Solution25 solution = new Solution25();
+
+    String pass1 = "12345";
+    String pass2 = "abcdefg";
+    String pass3 = "12abcdefg345";
+    String pass4 = "12abcdefg345!@";
+    String pass5 = "@@123";
+
     @Test
     void passwordStrengthChecker1() {
-        assertEquals(1, solution.passwordStrengthChecker("12345"));
+        assertEquals(1, solution.passwordValidator(pass1.toCharArray()));
     }
 
     @Test
     void passwordStrengthChecker2() {
-        assertEquals(2, solution.passwordStrengthChecker("abcdefg"));
+        assertEquals(2, solution.passwordValidator(pass2.toCharArray()));
     }
 
     @Test
     void passwordStrengthChecker3() {
-        assertEquals(3, solution.passwordStrengthChecker("12abcdefg345"));
+        assertEquals(3, solution.passwordValidator(pass3.toCharArray()));
     }
 
     @Test
     void passwordStrengthChecker4() {
-        assertEquals(4, solution.passwordStrengthChecker("12abcdefg345!@"));
+        assertEquals(4, solution.passwordValidator(pass4.toCharArray()));
     }
 
     @Test
     void passwordStrengthChecker5() {
-        assertEquals(0, solution.passwordStrengthChecker("@@123"));
+        assertEquals(0, solution.passwordValidator(pass5.toCharArray()));
     }
 }
