@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PaymentCalculatorTest {
-    PaymentCalculator calc = new PaymentCalculator();
+class Solution26Test {
+    PaymentCalculator calc = new PaymentCalculator(5000, 100, (float) (0.12/365));
 
     @Test
     void calculateMonthsUntilPaidOffTest() {
-        assertEquals(70, calc.calculateMonthsUntilPaidOff(5000, (float) ((12/100)/365), 100));
+        assertEquals(70, calc.calculateMonthsUntilPaidOff());
     }
 
 }

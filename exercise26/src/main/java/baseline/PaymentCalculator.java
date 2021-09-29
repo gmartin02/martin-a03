@@ -3,15 +3,21 @@ package baseline;
 import static java.lang.Math.log;
 
 public class PaymentCalculator {
-    Solution26 solution = new Solution26();
+    private final float b;
+    private final float p;
+    private final float i;
 
+    public PaymentCalculator(float b, float p, float i) {
+        this.b = b;
+        this.p = p;
+        this.i = i;
+
+    }
     public int calculateMonthsUntilPaidOff() {
         //gets the values passed from the Solution26 class
-        float b = solution.getBalance();
-        float p = solution.getAPR();
-        float i = solution.getAPR();
+
         //uses the formula to get monthsRemaining
-        float n = -(1.0/30) * log(1 + b/p * (1 - (1 + i)^30)) / log(1 + i);
+        double n = -(1.0/30) * log(1 + b/p * (1 - Math.pow((1 + i), 30))) / log(1 + i);
         //rounds monthsRemaining up and returns it
         return (int)Math.ceil(n);
     }

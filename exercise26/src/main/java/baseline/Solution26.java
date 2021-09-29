@@ -11,8 +11,8 @@ public class Solution26 {
     private static final Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        PaymentCalculator calc = new PaymentCalculator();
-
+        Solution26 solution = new Solution26();
+        PaymentCalculator calc = new PaymentCalculator(solution.getBalance(), solution.getMonthlyPayment(), solution.getAPR());
         //calls the calculateMonthsUntilPaidOff function with the variables in this class passed in
         //prints out the value returned by the above function call
         System.out.printf("It will take you %d months to pay off this card", calc.calculateMonthsUntilPaidOff());
@@ -40,3 +40,5 @@ public class Solution26 {
         return input.nextFloat();
     }
 }
+
+
