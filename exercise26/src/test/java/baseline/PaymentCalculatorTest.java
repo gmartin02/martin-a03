@@ -6,11 +6,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PaymentCalculatorTest {
     PaymentCalculator calc = new PaymentCalculator();
-    Solution26 solution = new Solution26();
 
     @Test
     void calculateMonthsUntilPaidOffTest() {
-        assertEquals(70, calc.calculateMonthsUntilPaidOff(solution.getBalance(), solution.getAPR(), solution.getMonthlyPayment()));
+        assertEquals(70, calc.calculateMonthsUntilPaidOff(5000, (float) ((12/100)/365), 100));
     }
 
 }
