@@ -8,7 +8,12 @@ class Solution28Test {
     Solution28 solution = new Solution28();
     @Test
     void addingFiveNumbersTest() {
-        assertEquals(15, solution.addingFiveNumbers());
+        solution.addingNumbers(1);
+        solution.addingNumbers(2);
+        solution.addingNumbers(3);
+        solution.addingNumbers(4);
+
+        assertEquals(15, solution.addingNumbers(5));
     }
 
 }
