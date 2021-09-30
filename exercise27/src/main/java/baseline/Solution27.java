@@ -72,7 +72,7 @@ public class Solution27 {
 
     public boolean validateNameFilled(String name) {
         //returns true if name is not null
-        if(name != null) {
+        if(name.length() != 0) {
             return true;
         }
         return false;
@@ -84,13 +84,8 @@ public class Solution27 {
         }
 
         //checks for 2 letters, a hyphen, and 4 numbers using the indexes of the array
-        if(!Character.isLetter(employeeID.charAt(0)) && !Character.isLetter(employeeID.charAt(1))) {
-            return false;
-        }
-        if(employeeID.charAt(2) != '-') {
-            return false;
-        }
-        if(!Character.isDigit(employeeID.charAt(3)) && !Character.isDigit(employeeID.charAt(4)) && !Character.isDigit(employeeID.charAt(5)) && !Character.isDigit(employeeID.charAt(6))) {
+        if(!Character.isLetter(employeeID.charAt(0)) || !Character.isLetter(employeeID.charAt(1))
+        || employeeID.charAt(2) != '-' || !Character.isDigit(employeeID.charAt(3)) || !Character.isDigit(employeeID.charAt(4)) || !Character.isDigit(employeeID.charAt(5)) || !Character.isDigit(employeeID.charAt(6))) {
             return false;
         }
         //returns true if the above rule is followed
