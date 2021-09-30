@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Solution28 {
     private static final Scanner input = new Scanner(System.in);
-    private int total = 0;
+    public int total = 0;
     public static void main(String[] args) {
         Solution28 solution = new Solution28();
         //loops two functions five times

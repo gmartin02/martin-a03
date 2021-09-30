@@ -1,19 +1,19 @@
 package baseline;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class Solution28Test {
     Solution28 solution = new Solution28();
-    @Test
-    void addingFiveNumbersTest() {
-        solution.addingNumbers(1);
-        solution.addingNumbers(2);
-        solution.addingNumbers(3);
-        solution.addingNumbers(4);
 
-        assertEquals(15, solution.addingNumbers(5));
+    @ParameterizedTest
+    @ValueSource(ints = {1, 2, 3, 4, 5})
+    void addingFiveNumbersTest(int num) {
+        solution.total = 3;
+        assertEquals(num+3, solution.addingNumbers(num));
     }
 
 }
