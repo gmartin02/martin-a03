@@ -5,19 +5,29 @@
 
 package baseline;
 
+import java.util.Scanner;
+
 public class Solution28 {
-    private int total;
+    private static final Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        //set total equal to the returned value of addingFIveNumbers
-        //print out the total
+        Solution28 solution = new Solution28();
 
+        //print out the total
+        System.out.println("The sum is " + solution.addingFiveNumbers());
     }
 
     public int addingFiveNumbers() {
         int sum = 0;
         //prompts for a number 5 times using a for loop
-        //before then end of an iteration the entered number is added to sum
+        for(int i = 0;i < 5;i++) {
+            System.out.println("Please enter a number");
+
+            //before then end of an iteration the entered number is added to sum
+            sum += input.nextInt();
+        }
+
         //sum is returned after the loop terminates
+        return sum;
     }
 }
