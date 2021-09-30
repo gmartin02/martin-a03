@@ -7,11 +7,13 @@ package baseline;
 import java.util.Scanner;
 
 public class Solution27 {
+    private boolean errorFlag;
     private static final Scanner input = new Scanner(System.in);
     private String firstName;
     private String lastName;
     private String employeeID;
     private int zipCode;
+    private String errorMessage;
 
     public static void main(String[] args) {
         Solution27 solution = new Solution27();
@@ -20,16 +22,44 @@ public class Solution27 {
         solution.userInput();
 
         //calls validateInput
-        solution.validateInput(solution.firstName, solution.lastName, solution.employeeID, solution.zipCode);
+        solution.errorFlag = solution.validateInput(solution.firstName, solution.lastName, solution.employeeID, solution.zipCode);
+
+        System.out.println(solution.errorFlag ? "There were no errors found." : solution.errorMessage);
 
     }
+
+    public String errorFinder(boolean fLength, boolean lLength, boolean fFilled, boolean lFilled, boolean idCorrect, boolean zipCorrect) {
+        String completeError = "";
+        if(!fLength) {
+            completeError += "\nThe first name must be at least 2 characters long";
+        }
+        if(!lLength) {
+            completeError += "\nThe last name must be at least 2 characters long";
+        }
+        if(!fFilled) {
+            completeError += "\nThe first name must be filled in";
+        }
+        if(!lFilled) {
+            completeError += "\nThe last name must be filled in";
+        }
+        if(!idCorrect) {
+            completeError += "\nThe employee ID must be in the format of AA-1234";
+        }
+        if(!zipCorrect) {
+            completeError += "\nThe zipcode must be a 5 digit number";
+        }
+        return completeError;
+    }
+
     public void userInput() {
         //gets the users input for all 4 required fields
+
+        //in order to get an unfilled string for first/last name you press enter on teh line after the prompt
         System.out.println("Enter the first name: ");
-        firstName = input.next();
+        firstName = input.nextLine();
 
         System.out.println("Enter the last name: ");
-        lastName = input.next();
+        lastName = input.nextLine();
 
         System.out.println("Enter the ZIP code: ");
         zipCode = input.nextInt();
@@ -57,6 +87,7 @@ public class Solution27 {
         if(fLength && lLength && fFilled && lFilled && idCorrect && zipCorrect) {
             return true;
         } else {
+            errorMessage = errorFinder(fLength, lLength, fFilled, lFilled, idCorrect, zipCorrect);
             return false;
         }
         //if any condition is false it prints out the correct error message
