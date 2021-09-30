@@ -9,7 +9,7 @@ class Solution27Test {
 
     @Test
     void validateInputTest() {
-        assertTrue(solution.validateInput("John", "Smith", "AA-1234", 33029));
+        assertTrue(solution.validateInput("J", "", "AA-1234", 33029));
     }
 
     @Test
@@ -19,7 +19,7 @@ class Solution27Test {
 
     @Test
     void validateNameFilledTest() {
-        assertTrue(solution.validateNameFilled("John"));
+        assertTrue(solution.validateNameFilled(""));
     }
 
     @Test
