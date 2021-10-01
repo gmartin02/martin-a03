@@ -19,7 +19,7 @@ public class Solution30 {
             for(int j = 1;j <= 12;j++) {
                 //prints out the result each time
                 //use %4 to create the columns
-                System.out.printf("%4d", multiplicationFunction(i, j));
+                System.out.printf("%5d", multiplicationFunction(i, j));
             }
             //uses %n once the inner loop completes once
             System.out.printf("%n");
