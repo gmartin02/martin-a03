@@ -26,6 +26,7 @@ public class Solution29 {
                     //throws exception if there is either 0 entered or a number is not entered
                     throw new IllegalArgumentException();
                 }
+                //exits loop if no exception is caught
                 break;
             } catch (IllegalArgumentException | InputMismatchException e){
                 //when the exception is caught it tells the user
