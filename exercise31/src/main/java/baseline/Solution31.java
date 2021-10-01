@@ -4,6 +4,7 @@
  */
 package baseline;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Solution31 {
@@ -23,17 +24,37 @@ public class Solution31 {
     }
 
     public int getUserAge() {
-        //prompts the user for their age
-        System.out.println("PLease enter your age.");
+        int age;
+        while(true) {
+            //prompts the user for their age
+            System.out.println("PLease enter your age.");
+            try {
+                age = input.nextInt();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Please only enter numbers");
+                input.nextLine();
+            }
+        }
         //returns the user's age
-        return input.nextInt();
+        return age;
     }
 
     public int getRestingHeartRate() {
-        //prompts the user for their resting heart rate
-        System.out.println("PLease enter your resting heart rate.");
+        int hr;
+        while(true) {
+            //prompts the user for their resting heart rate
+            System.out.println("PLease enter your resting heart rate.");
+            try {
+                hr = input.nextInt();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Please only enter numbers");
+                input.nextLine();
+            }
+        }
         //returns the user's resting heart rate
-        return input.nextInt();
+        return hr;
     }
 
     public int karvonenHeartRateCalc(int age, int restingHR, double intensity) {
