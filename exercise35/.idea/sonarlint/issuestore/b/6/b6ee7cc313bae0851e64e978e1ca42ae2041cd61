@@ -1,17 +1,0 @@
-
-o
-java:S2293
-"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ðò÷‡
-X
-java:S1854"<Remove this useless assignment to local variable "solution".(„Ð˜18§¥Á™Ä/
-I
-java:S1481"-Remove this unused "solution" local variable.(„Ð˜18§¥Á™Ä/
-?
-java:S1068
-")Remove this unused "names" private field.(Ðò÷‡
-†
-java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ØèÝö
-†
-java:S1319"pThe type of the "names" object should be an interface such as "List" rather than the implementation "ArrayList".(ØèÝö
-Š
-java:S1319"oThe type of the "name" object should be an interface such as "List" rather than the implementation "ArrayList".(Â‰Òêýÿÿÿÿ

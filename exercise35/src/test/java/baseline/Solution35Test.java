@@ -18,13 +18,13 @@ class Solution35Test {
     @Test
     void chooseWinnerTest() {
         Solution35 solution = new Solution35();
-        ArrayList<String> namesTest = new ArrayList<String>();
+        ArrayList<String> namesTest = new ArrayList<>();
         namesTest.add("Jim");
         namesTest.add("Dwight");
         namesTest.add("Pam");
         namesTest.add("Michael");
 
-        int rng = solution.randomNumberGenerator(5);
+        int rng = solution.randomNumberGenerator(4);
 
         assertEquals(namesTest.get(rng), solution.chooseWinner(namesTest, rng));
     }
