@@ -1,0 +1,13 @@
+
+W
+java:S1854"<Remove this useless assignment to local variable "solution".(«ŸÆİøÿÿÿÿ
+H
+java:S1481"-Remove this unused "solution" local variable.(«ŸÆİøÿÿÿÿ
+P
+java:S1172"3Remove this unused method parameter "randomNumber".(å‰¹¯8Ôæ™øÃ/
+N
+java:S1481",Remove this unused "counter" local variable.(õ“¨Ûúÿÿÿÿ8Ôæ™øÃ/
+M
+java:S1068"2Remove this unused "gameDifficulty" private field.(Êğ´úÿÿÿÿ
+K
+java:S1068	"0Remove this unused "randomNumber" private field.(ºëåğùÿÿÿÿ
