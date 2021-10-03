@@ -1,0 +1,17 @@
+
+U
+java:S1854'":Remove this useless assignment to local variable "random".(’Ã—Àøÿÿÿÿ
+Q
+java:S1854&"6Remove this useless assignment to local variable "sb".(€ê±Õúÿÿÿÿ
+A
+java:S1172%"&Remove these unused method parameters.(¶öˆÅûÿÿÿÿ
+B
+java:S1481&"'Remove this unused "sb" local variable.(€ê±Õúÿÿÿÿ
+F
+java:S1481'"+Remove this unused "random" local variable.(’Ã—Àøÿÿÿÿ
+I
+java:S1068"-Remove this unused "minLength" private field.(óı8ßÌ›Ä/
+L
+java:S1068"/Remove this unused "numberCount" private field.(¨Œá™8ßÌ›Ä/
+Q
+java:S1068"4Remove this unused "specialCharCount" private field.(Ò¸ïâ8ßÌ›Ä/
