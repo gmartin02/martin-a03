@@ -18,7 +18,7 @@ class Solution36Test {
         testArray.add(3);
         testArray.add(4);
         testArray.add(5);
-        assertEquals(5.00, solution.average(testArray) );
+        assertEquals(3.00, solution.average(testArray) );
     }
 
     @Test
@@ -29,7 +29,7 @@ class Solution36Test {
         testArray.add(3);
         testArray.add(4);
         testArray.add(5);
-        assertEquals(1.41, solution.average(testArray) );
+        assertEquals(1.41, solution.std(testArray, solution.average(testArray)));
 
     }
 
@@ -41,7 +41,7 @@ class Solution36Test {
         testArray.add(3);
         testArray.add(4);
         testArray.add(5);
-        assertEquals(1, solution.average(testArray) );
+        assertEquals(1, solution.min(testArray));
 
     }
 
@@ -53,7 +53,7 @@ class Solution36Test {
         testArray.add(3);
         testArray.add(4);
         testArray.add(5);
-        assertEquals(5, solution.average(testArray) );
+        assertEquals(5, solution.max(testArray));
     }
 
 }
