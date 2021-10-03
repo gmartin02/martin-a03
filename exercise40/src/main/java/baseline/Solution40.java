@@ -19,6 +19,9 @@ public class Solution40 {
     private final List<Map<String, String>> employeeList = new ArrayList<>();
 
     public static void main(String[] args) {
+        //asks the user for a search string
+        //passes search String to search for it
+        //prints out the table to show only search results
 
     }
 
