@@ -26,7 +26,7 @@ public class Solution40 {
         solution.searchItem = solution.getSearchString();
         //passes search String to search for it
         //prints out the table to show only search results
-        solution.printSearchResults(solution.searchForString(solution.searchItem));
+        solution.printSearchResults(solution.searchForString(solution.employeeList, solution.searchItem));
     }
 
     public List<Map<String, String>> getEmployeeList() {
@@ -77,7 +77,7 @@ public class Solution40 {
         return input.nextLine();
     }
 
-    public List<ArrayList<String>> searchForString(String search) {
+    public List<ArrayList<String>> searchForString(List<Map<String, String>> employeeList, String search) {
         //create a list that can hold the list of maps as a list of array lists
         List<ArrayList<String>> searchList = new ArrayList<>();
         //create an empty list
@@ -87,11 +87,11 @@ public class Solution40 {
         ArrayList<String> positionResult = new ArrayList<>();
         ArrayList<String> dateResult = new ArrayList<>();
 
+        //fills up list with empty array lists for each field
         searchResultList.add(firstNameResult);
         searchResultList.add(lastNameResult);
         searchResultList.add(positionResult);
         searchResultList.add(dateResult);
-
 
         //turn each of the individual maps to array lists
         Set<String> lastNames = employeeList.get(0).keySet();
