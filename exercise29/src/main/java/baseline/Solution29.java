@@ -13,21 +13,22 @@ public class Solution29 {
     public static void main(String[] args) {
         Solution29 solution = new Solution29();
 
-        solution.ruleOf72Calculator(solution.rateOfReturnInput());
+        System.out.printf("It will take %.2f years to double your investment.", solution.ruleOf72Calculator(solution.rateOfReturnInput()));
     }
 
     public double rateOfReturnInput() {
         //while !done ask for the rate of return
+        int ror;
         while(true) {
             System.out.println("Please enter the rate of return: ");
-
             try {
-                if(input.nextDouble() <= 0) {
+                ror = input.nextInt();
+                if(ror <= 0) {
                     //throws exception if there is either 0 entered or a number is not entered
                     throw new IllegalArgumentException();
                 }
-                //exits loop if no exception is caught
                 break;
+                //exits loop if no exception is caught
             } catch (IllegalArgumentException | InputMismatchException e){
                 //when the exception is caught it tells the user
                 System.out.println("Sorry, that is not a valid input.");
@@ -36,7 +37,7 @@ public class Solution29 {
 
         }
         //returns a valid user input
-        return input.nextDouble();
+        return ror;
     }
     public double ruleOf72Calculator(double rateOfReturn) {
         //returns 72 divided by the passed rateOfReturn

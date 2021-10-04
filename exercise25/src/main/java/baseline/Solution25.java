@@ -82,7 +82,6 @@ public class Solution25 {
             }
             return 3;
         }
-
         //returns an int 0-4 that relates to an output statement
         return 0;
     }

@@ -36,19 +36,19 @@ public class Solution37 {
 
     public int getMinimumPasswordLength() {
         //return min password length from the user
-        System.out.print("What is the minimum password length?");
+        System.out.print("What is the minimum password length? ");
         return input.nextInt();
     }
 
     public int getNumberOfNumbersInPassword() {
         //return # of numbers from the user
-        System.out.print("How many numbers?");
+        System.out.print("How many numbers? ");
         return input.nextInt();
     }
 
     public int getNumberOfSpecialCharactersInPassword() {
         //return # of special characters from the user
-        System.out.print("How many special characters?");
+        System.out.print("How many special characters? ");
         return input.nextInt();
     }
 
